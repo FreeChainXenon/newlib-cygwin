@@ -455,6 +455,9 @@ case "${host}" in
 	newlib_cflags="${newlib_cflags} -DHAVE_FCNTL -DHAVE_BLKSIZE -DHAVE_OPENDIR -DHAVE_RENAME"
 	newlib_cflags="${newlib_cflags} -DGETREENT_PROVIDED -DSIGNAL_PROVIDED"
 	;;
+  *-fcx-*)
+	sys_dir=amdgcn # Just use a random one for now, we don't use this yet.
+	;;
   a29k-*-*)
 	sys_dir=a29khif
 	signal_dir=
