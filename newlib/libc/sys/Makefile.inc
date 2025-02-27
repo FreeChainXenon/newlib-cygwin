@@ -64,6 +64,9 @@ endif
 if HAVE_LIBC_SYS_W65_DIR
 include %D%/w65/Makefile.inc
 endif
+if HAVE_LIBC_SYS_XENON_DIR
+include %D%/xenon/Makefile.inc
+endif
 if HAVE_LIBC_SYS_Z8KSIM_DIR
 include %D%/z8ksim/Makefile.inc
 endif

@@ -456,7 +456,7 @@ case "${host}" in
 	newlib_cflags="${newlib_cflags} -DGETREENT_PROVIDED -DSIGNAL_PROVIDED"
 	;;
   *-fcx-*)
-	sys_dir=amdgcn # Just use a random one for now, we don't use this yet.
+	sys_dir=xenon
 	;;
   a29k-*-*)
 	sys_dir=a29khif
