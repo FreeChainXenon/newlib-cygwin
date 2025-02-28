@@ -13,7 +13,7 @@ _start:
 	# Save the link register
 	mflr 12
 	std 12, 0(1)
-	
+
 	# Determine where the stack pointer should be moved to (16-byte alignment down, at least 8 bytes free)
 	subi 14, 1, 0x10
 	lis 15, 0xFFFF
@@ -24,8 +24,14 @@ _start:
 	std 1, 0(14)
 	mr 1, 14
 
+  # Call initialisation procedures
+  bl __init
+
 	# Call main()
 	bl main
+
+  # Call finishing procedures
+  bl __fini
 
 	# Restore the stack pointer
 	ld 1, 0(1)
